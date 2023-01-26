@@ -9,6 +9,7 @@ import { animal } from '../models/animal';
 })
 export class AnimalFormComponent {
 
+
   form: animal = {
     id: 0,
     name: '',
@@ -17,6 +18,10 @@ export class AnimalFormComponent {
 
   onSubmit(_t4: NgForm) {
     console.log('Animal entered: ', _t4.value);
+    }
+
+  OnReset(_t7: NgForm) {
+    _t7.reset();
     }
 
 }
