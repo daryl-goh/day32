@@ -13,8 +13,12 @@ export class AnimalFormComponent {
   form: animal = {
     id: 0,
     name: '',
+    email: '',
     lifespan: 0
   };
+
+
+
 
   onSubmit(_t4: NgForm) {
     console.log('Animal entered: ', _t4.value);

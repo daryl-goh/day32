@@ -32,6 +32,27 @@
         
         </div>
     </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" id="email" 
+      placeholder="Animal Email Address" required email
+      #email="ngModel" ngModel
+      [ngClass]="{'is-invalid': animalForm.submitted && email.errors}">
+
+      <div *ngIf="animalForm.submitted && email.errors" class="invalid-feedback">
+        <div *ngIf="email.errors['required']">
+          Animal email is required. (Mandatory field)
+        </div>
+        <div *ngIf="email.errors['email']">
+          Invalid Animal Email Address
+        </div>
+ 
+        
+        </div>
+    
+    </div>
+
     <div class="mb-3">
       <label for="lifespan" class="form-label">Life Span</label>
       <input type="number" name="lifespan" id="lifespan" class="form-control" 
