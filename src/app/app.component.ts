@@ -13,4 +13,9 @@ export class AppComponent {
     {name:'iPhone', id: 2, price: 1200},
     {name:'Mac Mini', id: 3, price: 1500}
   ]
+  selectedItem: any;
+
+  onItemReceive(item: any) {
+    this.selectedItem = item;
+  }
 }
